@@ -9,6 +9,7 @@ services:
       - ./.env
 
   web:
+    image: ekaterinasolovyeva/yamdb:latest
     build: .
     restart: always
     volumes:
