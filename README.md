@@ -7,10 +7,11 @@
 
 Клонировать репозиторий и перейти в него в командной строке:
 ```
-git clone https://github.com/nu-shtosh/api_yamdb
+git clone https://github.com/KaterinaSolovyeva/yamdb_final
+
 ```
 ```
-cd api_yambd
+cd yamdb_final
 ```
 Создайте файл .env командой touch .env. Шаблон наполнения env-файла:
 ```
