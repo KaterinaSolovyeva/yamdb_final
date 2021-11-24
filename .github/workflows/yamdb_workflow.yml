@@ -15,11 +15,8 @@ jobs:
 
     - name: Install dependencies
       run: | 
-        # обновление pip
         python -m pip install --upgrade pip 
-        # установка flake8 и его плагинов
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
-        # установка зависимостей
         pip install -r requirements.txt 
 
     - name: Test with flake8 and pytest
@@ -45,7 +42,7 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/infra:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb:latest
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
@@ -58,12 +55,10 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull <имя-пользователя>/<имя-репозитория>
+            sudo docker pull KaterinaSolovyeva/yamdb_final
             sudo docker-compose stop
             sudo docker-compose rm web
-            # Создаст файл для переменных окружения
             touch .env 
-            # Наполнит файл переменными окружения из секретов GitHub
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
             echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
