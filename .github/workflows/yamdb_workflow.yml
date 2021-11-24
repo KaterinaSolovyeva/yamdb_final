@@ -55,7 +55,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull KaterinaSolovyeva/yamdb_final
+            sudo docker pull ekaterinasolovyeva/yamdb
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env 
