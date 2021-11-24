@@ -1,14 +1,12 @@
 from datetime import datetime
+
 from django.db.models import Avg
 from rest_framework.relations import SlugRelatedField
-from rest_framework.serializers import (
-    CurrentUserDefault,
-    SerializerMethodField,
-    ModelSerializer,
-    ValidationError)
+from rest_framework.serializers import (CurrentUserDefault, ModelSerializer,
+                                        SerializerMethodField, ValidationError)
 
-from titles.models import Category, Genre, Title
 from reviews.models import Comment, Review
+from titles.models import Category, Genre, Title
 
 
 class CategorySerializer(ModelSerializer):

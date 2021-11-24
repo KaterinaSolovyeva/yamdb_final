@@ -1,9 +1,8 @@
-from django.urls import path, include
+from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
 from api import views
-from users.views import UserViewSet, SignupView, TokenView
-
+from users.views import SignupView, TokenView, UserViewSet
 
 app_name = 'api'
 API_VERSION_1 = 'v1/'
