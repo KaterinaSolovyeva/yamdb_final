@@ -1,7 +1,13 @@
 ![YaMDB workflow](https://github.com/KaterinaSolovyeva/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 # Описание.
 
 Проект "YaMDb" собирает отзывы пользователей на различные произведения.
+Адрес, на котором всё это можно видеть в сборе:
+- Администрирование
+http://www.yatubeproject.tk/admin/
+- Redoc
+http://www.yatubeproject.tk/redoc/
 
 # Как запустить проект:
 
