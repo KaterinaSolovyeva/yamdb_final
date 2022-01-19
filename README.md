@@ -3,6 +3,7 @@
 # Описание.
 
 Проект "YaMDb" - база отзывов пользователей на фильмы, книги и музыку.
+Стек: Python 3, Django 3, Django REST Framework, SQLite3, Simple-JWT
 
 # Как запустить проект:
 
